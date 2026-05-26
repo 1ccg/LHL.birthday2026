@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>祝林焕玲生日快乐</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{width:100%;height:100%;overflow:hidden;}
+body{
+  background: url("https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEUWqZqDtYN0O-zmnY8BDTnJDXQgVHF1gACGCgAAtk5eFRePY519L6o5TsE.jpeg") center/cover no-repeat;
+  position:relative;
+}
+.text-box{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  font-size:32px;
+  font-weight:bold;
+  color:#48d1cc;
+  line-height:2.2;
+  letter-spacing:2px;
+  text-shadow:2px 2px 5px #fff;
+  z-index:1;
+}
+.photo-box{
+  position:absolute;
+  left:50%;top:120%;
+  transform:translateX(-50%);
+  width:60vw;max-width:260px;
+  border-radius:16px;
+  box-shadow:0 0 20px rgba(255,90,140,0.4);
+  animation:imgUp 6s ease-out forwards;
+  z-index:2;
+}
+@keyframes imgUp{
+  0%{top:120%;opacity:0;}
+  50%{opacity:1;}
+  100%{top:50%;transform:translate(-50%,-50%);opacity:1;}
+}
+.photo-box img{width:100%;height:auto;border-radius:16px;}
+audio{display:none;}
+</style>
+</head>
+<body>
+
+<div class="text-box">
+祝林焕玲<br>
+生日快乐！<br>
+天天开心！<br>
+心想事成！
+</div>
+
+<div class="photo-box">
+<img src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEUWkZqDtIQke0Zb8ATa1WePBsqoIWH7QACrycAAtk5eFQeXXyOSN11-DsE.jpeg">
+</div>
+
+<audio id="music" loop preload="auto">
+<source src="https://api.doukan1.top/download_audio.php?url=https%3A%2F%2Fzf.doukan1.top%2Fgeren%2Fout%2F03ffa8d84d5d2163b4dee212f8bf40d7.mp3" type="audio/mpeg">
+
+
+<script>
+let audio = document.getElementById('music');
+let isPlayed = false;
+
+function startAudio(){
+    if(!isPlayed){
+        audio.play();
+        isPlayed = true;
+        document.body.removeEventListener('click', startAudio);
+        document.body.removeEventListener('touchstart', startAudio);
+    }
+}
+document.body.addEventListener('click', startAudio);
+document.body.addEventListener('touchstart', startAudio);
+</script>
+
+</body>
+</html>
